@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+*{
+    text-align: center;
+    color: white;
+}
+.game{
+    margin: 10px auto;
+    width: 600px;
+    height:auto;
+    font-size: 2rem;
+}
+.winner{
+    margin-bottom: .5rem;
+    background: red;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    min-height: 6rem;    
+}
+.winner p{
+    animation: clignote .5s linear infinite;    
+}
+.score{
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem 2rem;
+    margin-bottom:.5rem;
+}
+.players, .options{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+ .btn{
+     border-radius: 10px;   
+    color: white;
+    width: 45%;
+    padding: .5rem 2rem;
+    transition: .4s all ease;
+} 
+.btn:hover{
+   border-radius: 20px;      
+   transform: scaleX(1.05);   
+   cursor: pointer;
+} 
+.btn-player{  
+   background: rgba(13, 13, 251, 0.613);   
+} 
+.btn-option{
+   background: rgba(13, 13, 251, 0.231);   
+}
+.btn-auto{
+    width: 100%;
+    background: #000;    
+}
+table{
+    background: #000;
+    font-size: 1.2rem;  
+    border: none;  
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table thead{
+    background: teal;    
+}
+table thead tr th{
+    padding: .3rem 2rem;    
+}
+table tbody tr{
+    background: #00F;
+}
+table tbody tr:nth-child(even){
+    background: rgba(0, 0, 255, 0.462);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes clignote {
+    50%{opacity: 0;}
 }
